@@ -1,0 +1,9 @@
+注册中心集群：
+eureka-service-master：直接启动，访问：http://127.0.0.1:7998/  
+eureka-service-backup：直接启动，访问：http://127.0.0.1:7999/
+eureka-client-provider：直接启动，访问：http://127.0.0.1:8001/user/getuser  
+步骤：
+1，eureka-client-provider注册指向master或者backup，eureka.client.serviceUrl.defaultZone=http://localhost:7999/eureka/
+2，分别启动master，backup，provider
+3，关闭master，或者backup，再次访问http://127.0.0.1:8001/user/getuser，会返回结果JSON
+达到了高可用

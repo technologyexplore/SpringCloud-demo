@@ -1,0 +1,10 @@
+简单的zuul
+启动：eureka-zuul-simple
+浏览器访问：http://localhost:8888/it/spring-cloud
+
+微服务的zuul
+eureka-service：启动 ，
+eureka-client-provider：启动
+eureka-client-provider-two：启动
+eureka-client-zuul：启动
+访问：http://127.0.0.1:8888/producer/user/getuser 多访问几次，看2个服务都能访问到

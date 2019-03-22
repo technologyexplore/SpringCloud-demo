@@ -1,0 +1,7 @@
+服务端集群：
+eureka-service：直接启动，访问：http://127.0.0.1:8000/
+eureka-client-provider：提供服务的项目，访问：http://127.0.0.1:8001/user/getuser
+eureka-client-provider-two：提供服务的项目，直接启动，访问：http://127.0.0.1:8002/user/getuser
+eureka-client-consumer：消费端，启动，访问：http://127.0.0.1:8003/user/getuser  
+1，多访问几次http://127.0.0.1:8003/user/getuser，看下返回的json就知道那台服务器
+2，关闭一台提供服务的项目，再次访问http://127.0.0.1:8003/user/getuser，一样能访问
